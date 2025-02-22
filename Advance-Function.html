@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Advance Function</title>
+    </head>
+    <body>
+
+        <script>
+            //Anonoymous Function
+            const function1 = function (){
+                console.log('Hello');
+            };
+
+            function1();
+
+            //Passing Function inside Function
+            function display(para){  //Callback function
+                para();
+            }
+
+            display(function(){
+                console.log('helloooo');
+            });
+
+
+            //Special Function
+            setTimeout(function(){
+                console.log('TimeOut');
+            },3000);
+
+        </script>
+    </body>
+</html>
