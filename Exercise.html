@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Exercise</title>
+</head>
+
+<body>
+
+  <input type="date" class="toDoDate">
+  <button class="js-button" onclick="dueDate();">Add</button>
+  <iframe name="sw"  height="100%" width="100%"></iframe>
+  <a href="http://127.0.0.1:5500/ToDoList.html" target="sw" >Youtube</a>
+  <p class="a">vncxmv</p>
+  <button class="but" onclick="butt();">add</button>
+
+
+  
+
+
+  <script>
+
+    /*const arr = [10, 20, 30,77,56,80,453];
+    console.log(arr);
+    arr[2] = 99;
+    console.log(arr);
+    getLastElement();
+    console.log(`The Array ${swap(arr)}`);
+    add(arr, 2);
+    
+
+    const minmaxObject = {
+      min : null,
+      max : null
+    };
+
+    console.log(minmaxObject);
+
+    minmax(arr);
+
+    console.log(minmaxObject);
+
+
+
+    function getLastElement() {
+      const lastIndex = arr.length - 1;
+      console.log(arr[lastIndex])
+    }
+
+    function swap(arr) {
+      let temp = arr[0];
+      arr[0] = arr[arr.length - 1];
+      arr[arr.length - 1] = temp;
+      return arr;
+    }
+
+    function add(arr, plus) {
+      const newArr = [];
+      for (let i = 0; i < arr.length; i++) {
+        let temp = arr[i] + plus;
+        newArr.push(temp);
+      }
+      console.log(newArr)
+      addTwoArray(arr, newArr);
+    }
+
+    function addTwoArray(arr, newArr) {
+      const addOfTwo = [];
+      for (let i = 0; i < arr.length; i++) {
+        addOfTwo[i] = arr[i] + newArr[i];
+      }
+
+      console.log(addOfTwo)
+      
+    }
+
+    function minmax(arr) {
+      let high = arr[0] ;
+      let low ;
+      for (let i = 1; i <= arr.length; i++){
+        
+        if(high < arr[i]){
+          high = arr[i];
+          console.log(high);
+        }else if(high > arr[i]) {
+          low = arr[i];
+        }
+
+      }
+      console.log(`Max is ${high}`);
+      console.log(`Min is ${low}`);
+      minmaxObject.max=high;
+      minmaxObject.min=low;
+    }*/
+
+    const arr = [];
+
+    console.log(arr)
+
+    function dueDate(){
+      const inputDate = document.querySelector('.toDoDate');
+
+      const newDate = inputDate.value;
+      arr.push(newDate);
+
+      console.log(arr)
+      
+    }
+
+
+    const arr1=[1,2,1];
+    const arr2=arr1.splice();
+    arr2.push(4);
+    console.log(arr1);
+
+    // for(let i=1;i<=90;i++){
+    //   if(i%3===0){
+    //     console.log('Fizz');
+    //     if(i%5===0){
+    //       console.log('FizzBuzz');
+    //     }
+    //   }else if(i%5===0){
+    //     console.log('Buzz');
+    //   }else{
+    //     console.log(i)
+    //   }
+
+    // }
+
+    /*function butt () {
+      const b= document.querySelector('.but').innerHTML="";
+    }
+   
+
+   console.log(b)*/
+
+
+   const a= setInterval(function() {
+      console.log(2);
+
+      console.log(`The id of SetInterval is ${a}`);
+      console.log(`The id of SetInterval is ${a}`);
+      console.log(`The id of SetInterval is ${a}`);
+    
+   }, 1000);
+
+   console.log(`The id of SetInterval is ${a}`);
+   
+  
+
+  </script>
+</body>
+
+</html>

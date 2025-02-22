@@ -1,0 +1,49 @@
+body {
+    margin-top: 200px;
+    place-items: center;
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tittle {
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.move-image {
+    height: 50px;
+}
+
+.move-button {
+    border-radius: 50px;
+    border: 3px solid white;
+    background-color: black;
+    padding: 10px;
+    margin-right: 20px;
+    width: 100px;
+    cursor: pointer;
+    height: 100px;
+}
+
+.displayResult {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.displayScore {
+    margin-top: 50px;
+}
+
+.reset-button , .autoPlay {
+    margin-right: 10px;
+    margin-top: 30px;
+    border: 2px solid white;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+}

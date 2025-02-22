@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To Do List</title>
+</head>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .displayToDo,
+    .headder {
+        display: grid;
+        grid-template-columns: 200px 150px 100px;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .displayToDo {
+        padding-left: 5px;
+    }
+
+    .headder {
+        margin-bottom: 10px;
+    }
+
+
+    .delete-button {
+        height: 35px;
+        background-color: red;
+        border-radius: 10px;
+        color: white;
+        border: none;
+
+    }
+
+    .todo {
+        height: 35px;
+    }
+
+    .toDoDate {
+        height: 35px;
+
+    }
+
+    .add-button {
+        height: 35px;
+        background-color: green;
+        color: white;
+        border-radius: 10px;
+        border: none;
+        margin-left: 5px;
+    }
+</style>
+
+<body>
+
+    <p>To Do list</p>
+
+    <div class="headder">
+        <input class="todo" placeholder="Enter work">
+        <input class="toDoDate" type="date">
+        <button class="add-button" onclick="add(); 
+        ">Add</button>
+        <div class="displayToDo"></div>
+    </div>
+    <script>
+
+
+        const toDoList = JSON.parse(localStorage.getItem('toDoStorage')) || [{ work: 'wash', date: '2022-12-12' }, { work: 'iron', date: '2022-04-09' }];
+        
+        displayToDoList();
+        function displayToDoList() {
+            let fullHtml = '';
+            for (let i = 0; i < toDoList.length; i++) {
+
+                const toDoObject = toDoList[i];
+
+                const { work, date } = toDoObject;
+
+
+                const html = `
+                <div>${work}</div><div>${date}</div>
+                      <button class="delete-button" onclick="
+                        toDoList.splice(${i},1) ;displayToDoList(); localStorage.removeItem('toDoStorage');">
+                        Delete
+                    </button>
+                `;
+
+                fullHtml += html;
+
+            }
+
+            console.log(fullHtml);
+
+            document.querySelector('.displayToDo').innerHTML = fullHtml;
+
+            // localStorage.setItem('full',fullHtml);
+
+        }
+
+        function add() {
+            const inputElement = document.querySelector('.todo');
+            const work = inputElement.value;
+
+            const inputDate = document.querySelector('.toDoDate');
+            const date = inputDate.value;
+
+
+            toDoList.push({ work, date });
+            console.log(toDoList);
+            displayToDoList();
+
+            inputElement.value = '';
+            localStorage.setItem('toDoStorage', JSON.stringify(toDoList))
+        }
+
+
+
+    </script>
+</body>
+
+
+</html>
